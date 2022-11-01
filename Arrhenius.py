@@ -1,4 +1,5 @@
 # Arhennius Plot 
+#João Victor Lemos Valle
 #=====================================================
 import matplotlib.pyplot as plt
 import numpy as np
@@ -26,3 +27,4 @@ plt.savefig('Arrhenius-Plot.png')
 f = open('Energy.txt','w')
 f.write('Activation Energy: {} kcal/mol'.format(m)) 
 f.close()
+print('THE CODE WORKS, WELL DONE!!!')
