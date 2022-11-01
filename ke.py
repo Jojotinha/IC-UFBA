@@ -1,7 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
-T = [50.2 ,278.2  ,283.2  ,288.2  ,293.2  ,298.2 ,308.2, 318.15,333.15,500] #temperaturas das runs 
-
+try:
+	file = open('spc.lammps') 
+except:
+	file = open('tip4p.lammps')
+for lines in file:
+	lines = lines.strip()
+	if lines.startswith('T'):
+		lines = lines.split()
+		T = lines[lines.index('index')+1:]
 for i in T:
 	x = []
 	y = []
