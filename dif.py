@@ -1,3 +1,6 @@
+#GRÁFICO DA DIFUSÃO VERSUS TEMPERATURA
+#=======================================================
+#=======================================================
 import matplotlib.pyplot as plt
 import numpy as np
 file = ('dif_temp.txt')
@@ -6,7 +9,6 @@ x = []
 y = []
 for lines in fhand:
 	lines = lines.split()
-	print(lines)
 	x.append(float(lines[0]))
 	y.append(float(lines[1]))
 plt.plot(x,y,'r+',markersize = 10)
@@ -22,3 +24,5 @@ d = m*x + b
 print(x)
 print(d)		
 plt.savefig('dif_plot.png')
+#=======================================================
+#=======================================================
